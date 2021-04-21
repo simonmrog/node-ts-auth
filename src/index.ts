@@ -1,5 +1,11 @@
-function hello(name: string): string {
-  return "Hi, " + name;
+import app from "./app";
+import config from "./config";
+
+
+function initApplication(): void {
+  app.listen(config.PORT, function () {
+  console.log(`Server running on port ${config.PORT}`);
+});
 }
 
-console.log(hello("Simón"));
+initApplication();
